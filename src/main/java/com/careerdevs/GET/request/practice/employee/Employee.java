@@ -13,6 +13,24 @@ public class Employee {
     private String lastname;
     private String email;
 
+    public Employee() {
+
+    };
+
+    public Employee(long id, String firstName, String lastname, String email) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastname = lastname;
+        this.email = email;
+
+    }
+
+    public Employee(String firstName, String lastname, String email) {
+        this.firstName = firstName;
+        this.lastname = lastname;
+        this.email = email;
+
+    }
 
 
 }
