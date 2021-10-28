@@ -1,11 +1,11 @@
-package com.careerdevs.GET.request.practice.employee;
+package com.careerdevs.GET.request.practice.employees;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
+
 import java.util.concurrent.atomic.AtomicLong;
 //        4 routes Minimum
 //        root route
@@ -36,8 +36,8 @@ public class EmployeeController {
 
     @GetMapping("/getEmployee")
         public Employee getEmployee(@RequestParam(value="name", defaultValue = "employee first name") String firstName,
-                                 @RequestParam(value="lastName", defaultValue = "employee last name") String lastName,
-                                 @RequestParam(value="email", defaultValue = "employee email") String email,
+                                    @RequestParam(value="lastName", defaultValue = "employee last name") String lastName,
+                                    @RequestParam(value="email", defaultValue = "employee email") String email,
                                     @RequestParam(value="floor", defaultValue = "floor number") int floorNumber) {
         return new Employee(counter.incrementAndGet(), firstName, lastName, email, floorNumber);
     }
