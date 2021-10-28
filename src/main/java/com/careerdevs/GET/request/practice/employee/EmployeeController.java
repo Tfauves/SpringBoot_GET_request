@@ -18,10 +18,9 @@ public class EmployeeController {
     public String greet() {
         return "Nakatomi Plaza Directory";
     }
-//
-//    @GetMapping
-//    public List<Employee> getEmployees() {
-//        return List.of(new Employee("Jasper", "Canine", "jasperJ@jmail.com"));
-//    }
 
+    @GetMapping("/employee")
+    public Employee bossMan() {
+        return new Employee(1,"Joseph", "Takagi", "joeYoshinobuTakagi@nakatomi.com");
+    }
 }
