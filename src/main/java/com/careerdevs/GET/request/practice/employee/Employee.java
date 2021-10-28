@@ -8,24 +8,28 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
+    private int floorNumber;
 
-    public Employee(long id, String firstName) {
+//    public Employee(long id, String firstName) {
+//        this.id = id;
+//        this.firstName = firstName;
+//
+//    };
+
+//    public Employee(long id, String firstName, String lastname, String email) {
+//        this.id = id;
+//        this.firstName = firstName;
+//        this.lastName = lastname;
+//        this.email = email;
+//
+//    }
+
+    public Employee(long id, String firstName, String lastName, String email, int floorNumber) {
         this.id = id;
         this.firstName = firstName;
-
-    };
-
-    public Employee(long id, String firstName, String lastname, String email) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastname;
+        this.lastName = lastName;
         this.email = email;
-
-    }
-
-    public Employee(long id) {
-        this.id = id;
-
+        this.floorNumber = floorNumber;
     }
 
     public long getId() {
@@ -60,4 +64,11 @@ public class Employee {
         this.email = email;
     }
 
+    public int getFloorNumber() {
+        return floorNumber;
+    }
+
+    public void setFloorNumber(int floorNumber) {
+        this.floorNumber = floorNumber;
+    }
 }

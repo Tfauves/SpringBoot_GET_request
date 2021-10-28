@@ -26,24 +26,25 @@ public class EmployeeController {
 
     @GetMapping("/ceo")
     public Employee ceo() {
-        return new Employee(1,"Joseph", "Takagi", "joeYoshinobuTakagi@nakatomi.com");
+        return new Employee(1,"Joseph", "Takagi", "joeYoshinobuTakagi@nakatomi.com", 30);
     }
 
     @GetMapping("/execs")
     public Employee executive() {
-        return new Employee(1988,"Harry", "Ellis", "youMissedSome@nakatomi.com");
+        return new Employee(1988,"Harry", "Ellis", "youMissedSome@nakatomi.com", 30);
     }
 
     @GetMapping("/getEmployee")
         public Employee getEmployee(@RequestParam(value="name", defaultValue = "employee first name") String firstName,
                                  @RequestParam(value="lastName", defaultValue = "employee last name") String lastName,
-                                 @RequestParam(value="email", defaultValue = "employee email") String email) {
-        return new Employee(counter.incrementAndGet(), firstName, lastName, email);
+                                 @RequestParam(value="email", defaultValue = "employee email") String email,
+                                    @RequestParam(value="floor", defaultValue = "floor number") int floorNumber) {
+        return new Employee(counter.incrementAndGet(), firstName, lastName, email, floorNumber);
     }
 
-    @GetMapping("/employee/{id}")
-    public Employee employee(@PathVariable long id) {
-        return new Employee(id);
+    @GetMapping("/employee/{id}/{floorNumber}")
+    public Employee employee(@PathVariable long id, @PathVariable int floorNumber) {
+        return new Employee(id, "Holly", "Gennero", "hollyGM@nakatomi.com", floorNumber);
     }
 
 }
