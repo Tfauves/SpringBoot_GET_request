@@ -6,27 +6,36 @@ package com.careerdevs.GET.request.practice.employee;
 public class Employee {
     private long id;
     private String firstName;
-    private String lastname;
+    private String lastName;
     private String email;
 
-    public Employee() {
+    public Employee(long id, String firstName) {
+        this.id = id;
+        this.firstName = firstName;
 
     };
 
     public Employee(long id, String firstName, String lastname, String email) {
         this.id = id;
         this.firstName = firstName;
-        this.lastname = lastname;
+        this.lastName = lastname;
         this.email = email;
 
     }
 
-    public Employee(String firstName, String lastname, String email) {
-        this.firstName = firstName;
-        this.lastname = lastname;
-        this.email = email;
 
-    }
+//    public Employee(String firstName, String lastname, String email) {
+//        this.firstName = firstName;
+//        this.lastName = lastname;
+//        this.email = email;
+//
+//    }
+//
+//    public Employee(long incrementAndGet, String firstName, String lastName) {
+//        this.id = incrementAndGet;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
 
 
     public long getId() {
@@ -46,11 +55,11 @@ public class Employee {
     }
 
     public String getLastname() {
-        return lastname;
+        return lastName;
     }
 
     public void setLastname(String lastname) {
-        this.lastname = lastname;
+        this.lastName = lastname;
     }
 
     public String getEmail() {
@@ -61,13 +70,13 @@ public class Employee {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "id=" + id +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastname='" + lastName + '\'' +
+//                ", email='" + email + '\'' +
+//                '}';
+//    }
 }
