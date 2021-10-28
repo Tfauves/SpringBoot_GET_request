@@ -36,14 +36,14 @@ public class EmployeeController {
 
     @GetMapping("/getEmployee")
         public Employee getEmployee(@RequestParam(value="name", defaultValue = "employee first name") String firstName,
-                                 @RequestParam(value="lastname", defaultValue = "employee last name") String lastName,
+                                 @RequestParam(value="lastName", defaultValue = "employee last name") String lastName,
                                  @RequestParam(value="email", defaultValue = "employee email") String email) {
         return new Employee(counter.incrementAndGet(), firstName, lastName, email);
     }
 
-    @GetMapping("/employee/{name}")
-    public Employee employee(@PathVariable String firstName) {
-        return new Employee(counter.incrementAndGet(), firstName);
+    @GetMapping("/employee/{id}")
+    public Employee employee(@PathVariable long id) {
+        return new Employee(id);
     }
 
 }

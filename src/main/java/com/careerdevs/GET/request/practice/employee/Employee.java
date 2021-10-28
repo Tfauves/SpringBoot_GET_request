@@ -23,20 +23,10 @@ public class Employee {
 
     }
 
+    public Employee(long id) {
+        this.id = id;
 
-//    public Employee(String firstName, String lastname, String email) {
-//        this.firstName = firstName;
-//        this.lastName = lastname;
-//        this.email = email;
-//
-//    }
-//
-//    public Employee(long incrementAndGet, String firstName, String lastName) {
-//        this.id = incrementAndGet;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//    }
-
+    }
 
     public long getId() {
         return id;
@@ -70,13 +60,4 @@ public class Employee {
         this.email = email;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "id=" + id +
-//                ", firstName='" + firstName + '\'' +
-//                ", lastname='" + lastName + '\'' +
-//                ", email='" + email + '\'' +
-//                '}';
-//    }
 }
