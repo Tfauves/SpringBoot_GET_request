@@ -1,4 +1,4 @@
-package com.careerdevs.GET.request.practice.employees;
+package com.careerdevs.GET.request.practice;
 
 //Employee should have minimum id, firstName, lastName
 
